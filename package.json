@@ -1,0 +1,29 @@
+{
+  "name": "josh_about_game",
+  "version": "1.0.0",
+  "description": "> A clone of the web app, Steam and its page for the Stardew Valley game.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "jest",
+    "seed": "node db/seed.js",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpt15-fec-tabata-yoga/Josh_About_Game.git"
+  },
+  "author": "joshherz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpt15-fec-tabata-yoga/Josh_About_Game/issues"
+  },
+  "homepage": "https://github.com/rpt15-fec-tabata-yoga/Josh_About_Game#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "mongoose": "^5.6.9",
+    "nodemon": "^1.19.1"
+  }
+}
