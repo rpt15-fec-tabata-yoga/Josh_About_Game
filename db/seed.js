@@ -18,7 +18,9 @@ const seedDataMaker = (count) => {
     // recentUpdateData.save();
 
     let aboutThisGameData = new AboutThisGame({
+      aboutHeader: faker.lorem.sentence(),
       aboutBody: faker.lorem.paragraph(),
+      featureTitle: faker.lorem.sentence(),
       features: faker.lorem.paragraphs()
     });
     aboutThisGameData.save();

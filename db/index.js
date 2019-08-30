@@ -4,7 +4,7 @@ const {AboutThisGame} = require('./aboutThisGame.js');
 let db = mongoose.connection;
 
 let aboutGameFeatures = (callback) => {
-  AboutThisGame.find({}, null, { limit: 25}, function(err, data) {
+  AboutThisGame.find({}, null, { limit: 5}, function(err, data) {
     if (err) {
       callback(err);
     } else {

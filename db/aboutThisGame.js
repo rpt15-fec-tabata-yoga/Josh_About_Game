@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 
 
 const aboutThisGameSchema = new mongoose.Schema({
+  aboutHeader: String,
   aboutBody: String,
+  featureTitle: String,
   features: String
 });
 
