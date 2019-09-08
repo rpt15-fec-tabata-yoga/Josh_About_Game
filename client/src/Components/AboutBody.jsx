@@ -2,6 +2,7 @@ import React from 'react';
 
 const AboutBody = (props) => {
   return (
+
     <div>
       <h3 className= 'aboutThisGameHeading'> ABOUT THIS GAME </h3>
       <div className = 'aboutThisGameFirstSentence'>{props.aboutHeader}</div>
