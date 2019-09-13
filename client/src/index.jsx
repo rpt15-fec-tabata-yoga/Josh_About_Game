@@ -2,4 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Components/App.jsx';
 
-ReactDOM.render(<App />, document.getElementById('App'));
+//After talking with Stephen, we changed the names of the tags 
+//to be different for each of our microservices
+ReactDOM.render(<App />, document.getElementById('aboutGame'));
