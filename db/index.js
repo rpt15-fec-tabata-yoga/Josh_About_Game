@@ -3,8 +3,8 @@ mongoose.connect('mongodb://localhost/aboutGame', { useNewUrlParser: true });
 const {AboutThisGame} = require('./aboutThisGame.js');
 let db = mongoose.connection;
 
-let aboutGameFeatures = (callback) => {
-  AboutThisGame.find({}, null, { limit: 5}, function(err, data) {
+let aboutGameFeatures = (gameId, callback) => {
+  AboutThisGame.find({gameId: gameId}, null, { limit: 5}, function(err, data) {
     if (err) {
       callback(err);
     } else {

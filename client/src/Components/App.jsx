@@ -1,16 +1,15 @@
 import React from 'react';
 import axios from 'axios';
-//import styles from '../../../public/style.css';
 import Features from './Features.jsx'
 import AboutBody from './AboutBody.jsx'
 import styles from '../../../public/style.css'
-
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      gameId: window.location.pathname.split('/')[1],
+      // gameId: 1,
       featureData: [],
       aboutHeader: '',
       aboutBody: '',
@@ -27,7 +26,10 @@ class App extends React.Component {
 
   // getGameData using axios get
   getAboutThisGameFeaturesData() {
-    axios.get('/api/features')
+    // console.log('getAbouthisGameFeaturesData is ran'); //console log works 
+
+    console.log('this.state.gameId', this.state.gameId);
+    axios.get(`/api/features/${this.state.gameId}`)
       .then((res) => {
         // handle data
         this.setState({
@@ -47,7 +49,8 @@ class App extends React.Component {
     console.log('***state***', this.state);
     return (
       <div className = {styles.container}>
-        {console.log(this.state.featureData)}
+        {console.log(`**styles`, styles)}
+        
         <AboutBody aboutBody = {this.state.aboutBody} aboutHeader= {this.state.aboutHeader}/>
         <Features features = {this.state.featureData} />
       </div>
