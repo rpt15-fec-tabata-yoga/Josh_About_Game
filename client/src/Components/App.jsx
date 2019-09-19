@@ -4,6 +4,8 @@ import Features from './Features.jsx'
 import AboutBody from './AboutBody.jsx'
 import styles from '../../../public/style.css'
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +31,9 @@ class App extends React.Component {
     // console.log('getAbouthisGameFeaturesData is ran'); //console log works 
 
     console.log('this.state.gameId', this.state.gameId);
-    axios.get(`/api/features/${this.state.gameId}`)
+    // axios.get(`/api/features/${this.state.gameId}`)
+    axios.get(`http://my-env.wf8cymc59m.us-west-1.elasticbeanstalk.com/api/features/1`)
+    
       .then((res) => {
         // handle data
         this.setState({
